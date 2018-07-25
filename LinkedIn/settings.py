@@ -26,10 +26,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'vlob%+t=3!g6td49)33e*opp7-_unkw%e3*^%+4$%s)@v0fke1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ['prashanth-konnect.herokuapp.com', '127.0.0.1:8000']
 
@@ -110,7 +110,7 @@ WSGI_APPLICATION = 'LinkedIn.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default='DATABASE_URL'
     )
 }
 
@@ -159,3 +159,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
