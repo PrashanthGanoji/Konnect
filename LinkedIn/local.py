@@ -1,4 +1,4 @@
-from .base import *
+from LinkedIn.base import *
 
 ENVIRONMENT = 'local'
 DEBUG = True
