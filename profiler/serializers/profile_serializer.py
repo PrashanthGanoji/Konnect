@@ -93,10 +93,10 @@ class ProfileSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         instance.handel = validated_data.get('handel')
         instance.avatar = validated_data.get('avatar',instance.avatar)
-        instance.website = validated_data.get('website')
+        instance.website = validated_data.get('website', instance.website)
         instance.location = validated_data.get('location')
         instance.fullname = validated_data.get('fullname')
-        instance.linkedin = validated_data.get('linkedin')
+        instance.linkedin = validated_data.get('linkedin', instance.linkedin)
         instance.status = validated_data.get('status')
         instance.bio = validated_data.get('bio')
         instance.gitusername = validated_data.get('gitusername')
