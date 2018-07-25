@@ -1,0 +1,140 @@
+/*
+
+[Custom Stylesheet]
+
+Project     : SociFly - Multipurpose Social Network HTML5 Template
+Version     : 1.0
+Author      : ThemeLooks
+Author URI  : https://themeforest.net/user/themelooks
+
+You can write your custom css styles in this file...
+
+*/
+
+.error{
+border-color: red;
+}
+
+.error:focus{
+    border-color: #dc3545;
+    box-shadow: 0px 0px 10px rgba(200, 0, 0,0.7);
+}
+
+.error-msg{
+    color:red;
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.form-text{
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.header-common{
+content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+}
+
+.btn-normal{
+    background-color: #03A9F4;
+    color: white;
+}
+
+.widget-card{
+    margin-top:20px;
+    padding: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.10);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card-list{
+    display:flex;
+    flex-direction: row;
+    
+    flex-flow: row wrap;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.10);
+}
+
+.card-info{
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left:30px;
+    margin-top:5px;
+    margin-bottom:20px;
+    justify-content: space-between
+}
+
+.card-info-buttons{
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+    align-items: flex-end;
+    margin-left:30px;
+    margin-top:5px;
+    margin-bottom:20px;
+    justify-content: space-between
+}
+
+.skills-list{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.skills-list li{
+    border: 1px solid rgb(60, 173, 248);
+    border-radius: 5px;
+    color:black;
+    margin:3px 3px 3px 0;
+    padding: 3px;
+    background: rgba(60, 173, 248, 0.2);
+}
+
+.text-left{
+    text-align: left;
+}
+
+@media screen and (max-width: 776px) {
+    /* DOWNLOAD BLOCK */
+    .d--md-block{
+        display:none;
+    }
+}
+@media screen and (max-width: 776px){
+    .card-info-buttons{
+        flex-direction:row;
+    }
+    .card-list{
+        justify-content: center;
+    }
+    .card-info
+    {
+        align-items: center;
+    }
+}
+.likestyle{
+    color:#1da1f2;
+}
+/*
+content: " ";
+position: absolute;
+left: 5px;
+bottom: 5px;
+width: 12px;
+height: 12px;
+background-color: #ccc;
+border: 2px solid #fff;
+border-radius: 50%;
+transition: background-color .25s ease-in-out; */
