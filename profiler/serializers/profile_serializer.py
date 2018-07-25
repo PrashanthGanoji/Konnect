@@ -97,7 +97,8 @@ class ProfileSerializer(serializers.ModelSerializer):
             instance.website = validated_data.get('website')
         instance.location = validated_data.get('location')
         instance.fullname = validated_data.get('fullname')
-        instance.linkedin = validated_data.get('linkedin', instance.linkedin)
+        if validated_data.get('linkedin', None):
+            instance.linkedin = validated_data.get('linkedin')
         instance.status = validated_data.get('status')
         instance.bio = validated_data.get('bio')
         instance.gitusername = validated_data.get('gitusername')
