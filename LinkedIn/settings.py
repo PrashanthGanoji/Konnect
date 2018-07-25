@@ -29,7 +29,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'vlob%+t=3!g6td49)33e*opp7-_unkw%e3*^%+4$%s)@v0fke1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['prashanth-konnect.herokuapp.com', '127.0.0.1:8000']
 
