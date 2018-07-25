@@ -27,7 +27,7 @@ class ProfileView(APIView):
 
     def post(self, request, format='json'):
         user = request.user
-        post = request.data
+        post = request.data.copy()
         skills = post.pop('skills')
         serializer = ProfileSerializer(data=post)
         if serializer.is_valid():
