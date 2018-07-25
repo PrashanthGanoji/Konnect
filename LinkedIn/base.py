@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -161,19 +162,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #s3 storage
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 AWS_ACCESS_KEY_ID = 'AKIAISWESM73DJ4TUQDA'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'konnectmedia'
 AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com'
-STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+STATIC_URL = '/static/'
 
 AWS_QUERYSTRING_AUTH = False
 
 # MEDIA_URL = '/media/'
 
-MEDIA_URL = STATIC_URL + 'media/'
+MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/' + 'media/'
 
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 STATICFILES_FINDERS = (
