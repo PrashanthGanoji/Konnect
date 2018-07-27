@@ -88,7 +88,7 @@ class ProfileList(APIView):
         location = self.request.query_params.get('location',None)
 
         if username is not None:
-            queryset = queryset.filter(user__username__icontains=username)
+            queryset = queryset.filter(fullname__icontains=username)
         if skillset is not None:
             queryset = queryset.filter(skills__lang__iexact = skillset)
         if location is not None:
