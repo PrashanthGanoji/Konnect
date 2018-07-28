@@ -224,6 +224,10 @@ Author URI  : https://themeforest.net/user/themelooks
             }
         });
 
+        window.onclick = function(event) {
+            e.stopPropagation();
+        }
+
         /* ------------------------------------------------------------------------- *
          * BOX CONTROLS
          * ------------------------------------------------------------------------- */
