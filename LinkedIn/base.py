@@ -163,9 +163,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #s3 storage
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-AWS_ACCESS_KEY_ID = 'AKIAISWESM73DJ4TUQDA'
-AWS_SECRET_ACCESS_KEY = '8cBkADOHXUhFTeTbME0bNWvSKv9AerXhPRY6whwX'
+ 
+AWS_ACCESS_KEY_ID = '' #enter your access key id
+AWS_SECRET_ACCESS_KEY = '' #enter your secret access key
 AWS_STORAGE_BUCKET_NAME = 'konnectmedia'
 AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com'
 STATIC_URL = '/static/'
